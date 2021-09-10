@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+
+.App-logo {
+  height: 40vmin;
+  
+  pointer-events: none;
+}
+
+ .App-header{
+  font-family:'DotGothic16';
+  
+ }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    
+  }
+}
+
+
+
+.navbar-brand{
+  color: var(--primary-white) !important;
+  font-size: xx-large  !important;
+  font-family:'DotGothic16';
+}
+.App-header {
+  background-color: #aa9898;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  transition: 0.2s;
+  
+}
+.App-link {
+  color: #61dafb;
+}
+
+:root{
+ --primary-white: #fff;
+ --primary-dark: rgba(255,255,255,0);
+ 
+ 
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+.navbar-nav > li > a{
+  color: var(--primary-white) !important;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  font-family:'DotGothic16';
+  border-top: 0.1875rem solid var(--primary-dark);
+  text-align: center;
+  
+}
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus{
+  border-top: 0.1875rem solid var(--primary-white);
+ 
+}
+.navbar-nav > li > a:hover{
+  border-top: 0.1875rem solid var(--primary-white);
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
