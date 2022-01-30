@@ -78,8 +78,7 @@ function App() {
             <br></br>
             <Animator animation={MoveIn(-700, 0)}>
               <span style={{ color: "white", fontSize: "150%" }}>
-                I am currently learning:<br></br>-Web and Mobile Developement
-                with react and native. <br></br>
+                I am currently learning:<br></br>-ASP.NET and TSQL. <br></br>
 
               </span>
             </Animator>
