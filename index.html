@@ -1,1 +1,808 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="This is Erdem Ipek's personal website."/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>Erdem Ipek</title><link href="/static/css/2.150d169a.chunk.css" rel="stylesheet"><link href="/static/css/main.567b8c74.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(e){function r(r){for(var n,a,i=r[0],c=r[1],l=r[2],f=0,s=[];f<i.length;f++)a=i[f],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&s.push(o[a][0]),o[a]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(p&&p(r);s.length;)s.shift()();return u.push.apply(u,l||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var c=t[i];0!==o[c]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.e=function(e){var r=[],t=o[e];if(0!==t)if(t)r.push(t[2]);else{var n=new Promise((function(r,n){t=o[e]=[r,n]}));r.push(t[2]=n);var u,i=document.createElement("script");i.charset="utf-8",i.timeout=120,a.nc&&i.setAttribute("nonce",a.nc),i.src=function(e){return a.p+"static/js/"+({}[e]||e)+"."+{3:"d2c183d0"}[e]+".chunk.js"}(e);var c=new Error;u=function(r){i.onerror=i.onload=null,clearTimeout(l);var t=o[e];if(0!==t){if(t){var n=r&&("load"===r.type?"missing":r.type),u=r&&r.target&&r.target.src;c.message="Loading chunk "+e+" failed.\n("+n+": "+u+")",c.name="ChunkLoadError",c.type=n,c.request=u,t[1](c)}o[e]=void 0}};var l=setTimeout((function(){u({type:"timeout",target:i})}),12e4);i.onerror=i.onload=u,document.head.appendChild(i)}return Promise.all(r)},a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/",a.oe=function(e){throw console.error(e),e};var i=this["webpackJsonpmy-app"]=this["webpackJsonpmy-app"]||[],c=i.push.bind(i);i.push=r,i=i.slice();for(var l=0;l<i.length;l++)r(i[l]);var p=c;t()}([])</script><script src="/static/js/2.2c3fab9b.chunk.js"></script><script src="/static/js/main.b26acbbd.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erdem Ipek | Software Developer</title>
+  <meta name="description" content="Erdem Ipek - Software Developer specializing in AI, Machine Learning, and Full-Stack Development." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #0a192f;
+      --navy-light: #112240;
+      --navy-mid:   #1d3461;
+      --slate:      #8892b0;
+      --slate-light:#a8b2d8;
+      --white:      #ccd6f6;
+      --white-pure: #e6f1ff;
+      --green:      #64ffda;
+      --green-tint: rgba(100,255,218,.07);
+      --font-sans:  'Inter', sans-serif;
+      --font-mono:  'Fira Code', monospace;
+      --transition: all .25s cubic-bezier(.645,.045,.355,1);
+      --nav-h:      70px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--slate);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a { color: var(--green); text-decoration: none; transition: var(--transition); }
+    a:hover { color: var(--green); opacity: .8; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--navy-mid); border-radius: 3px; }
+
+    /* NAV */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      background: rgba(10,25,47,.92);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(100,255,218,.07);
+    }
+
+    .logo {
+      font-family: var(--font-mono);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--green);
+      letter-spacing: 1px;
+    }
+
+    nav { display: flex; align-items: center; gap: 36px; }
+
+    nav a {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--slate-light);
+      letter-spacing: .05em;
+    }
+    nav a:hover { color: var(--green); opacity: 1; }
+
+    nav .cta {
+      border: 1px solid var(--green);
+      color: var(--green);
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+    nav .cta:hover { background: var(--green-tint); }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--green);
+      color: var(--green);
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: var(--font-mono);
+    }
+
+    /* LAYOUT */
+    main { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+    section { padding: 100px 0; }
+    section:not(#hero) { min-height: auto; }
+
+    /* SECTION HEADINGS */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 52px;
+    }
+
+    .section-title .num {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      color: var(--green);
+    }
+
+    .section-title h2 {
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 600;
+      color: var(--white-pure);
+      white-space: nowrap;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 280px;
+      background: var(--navy-mid);
+      flex-shrink: 0;
+    }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: var(--nav-h);
+    }
+
+    .hero-overline {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+
+    .hero-name {
+      font-size: clamp(40px, 8vw, 80px);
+      font-weight: 700;
+      color: var(--white-pure);
+      line-height: 1.1;
+    }
+
+    .hero-sub {
+      font-size: clamp(28px, 5vw, 60px);
+      font-weight: 600;
+      color: var(--slate);
+      line-height: 1.2;
+      margin-top: 8px;
+    }
+
+    .hero-desc {
+      max-width: 540px;
+      margin-top: 24px;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      margin-top: 48px;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: 14px;
+      padding: 18px 40px;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .hero-cta:hover {
+      background: var(--green-tint);
+      opacity: 1;
+      transform: translateY(-3px);
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 16px;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .about-text a { border-bottom: 1px solid transparent; }
+    .about-text a:hover { border-color: var(--green); opacity: 1; }
+
+    .hl { color: var(--green); }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+      margin-top: 20px;
+      list-style: none;
+    }
+
+    .skills-list li {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--slate-light);
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .skills-list li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+    }
+
+    .avatar-box {
+      width: 100%;
+      max-width: 280px;
+      background: var(--navy-light);
+      border: 1px solid var(--navy-mid);
+      border-radius: 6px;
+      padding: 48px 0;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .avatar-box:hover {
+      transform: translateY(-4px);
+      border-color: rgba(100,255,218,.2);
+    }
+
+    .avatar-initials {
+      font-size: 68px;
+      font-weight: 700;
+      color: var(--green);
+      font-family: var(--font-mono);
+      line-height: 1;
+    }
+
+    .avatar-tag {
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    /* EXPERIENCE */
+    .exp-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--navy-mid);
+    }
+
+    .exp-item:last-child { border-bottom: none; }
+
+    .exp-date {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--slate);
+      padding-top: 4px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .exp-role {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .exp-desc { font-size: 15px; line-height: 1.75; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tags span {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--green);
+      background: var(--green-tint);
+      border: 1px solid rgba(100,255,218,.18);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--navy-light);
+      border: 1px solid var(--navy-mid);
+      border-radius: 6px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--green), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(100,255,218,.22);
+      box-shadow: 0 20px 60px -15px rgba(2,12,27,.7);
+    }
+
+    .project-card:hover::before { opacity: 1; }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .folder-icon { font-size: 36px; line-height: 1; }
+
+    .project-links { display: flex; gap: 14px; }
+
+    .project-links a {
+      color: var(--slate-light);
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    .project-links a:hover { color: var(--green); opacity: 1; }
+
+    .project-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white-pure);
+      margin-bottom: 12px;
+      transition: var(--transition);
+    }
+
+    .project-card:hover .project-name { color: var(--green); }
+
+    .project-desc {
+      font-size: 14px;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .project-tech span {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    /* CONTACT */
+    #contact {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 80px 0 120px;
+    }
+
+    .contact-overline {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--green);
+      margin-bottom: 18px;
+    }
+
+    #contact h2 {
+      font-size: clamp(34px, 5vw, 54px);
+      font-weight: 700;
+      color: var(--white-pure);
+      margin-bottom: 20px;
+    }
+
+    #contact p {
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: 14px;
+      padding: 20px 52px;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .contact-btn:hover {
+      background: var(--green-tint);
+      opacity: 1;
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--navy-mid);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--slate);
+      transition: var(--transition);
+    }
+
+    .social-links a:hover { color: var(--green); opacity: 1; }
+
+    footer p {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    /* SIDE ELEMENTS */
+    .side-element {
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .side-element::after {
+      content: '';
+      width: 1px;
+      height: 90px;
+      background: var(--slate);
+    }
+
+    .side-left { left: 40px; }
+    .side-right { right: 40px; }
+
+    .side-left a {
+      color: var(--slate);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      writing-mode: vertical-rl;
+      letter-spacing: .1em;
+      transition: var(--transition);
+    }
+
+    .side-left a:hover { color: var(--green); opacity: 1; transform: translateY(-4px); }
+
+    .side-right a {
+      color: var(--slate);
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    .side-right a:hover { color: var(--green); opacity: 1; transform: translateY(-4px); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      header { padding: 0 24px; }
+      nav { display: none; }
+      nav.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: var(--nav-h);
+        right: 0;
+        bottom: 0;
+        width: 280px;
+        background: var(--navy-light);
+        padding: 48px 32px;
+        border-left: 1px solid var(--navy-mid);
+        gap: 28px;
+        align-items: flex-start;
+        z-index: 99;
+      }
+      .menu-btn { display: block; }
+      .side-element { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .exp-item { grid-template-columns: 1fr; gap: 6px; }
+      .section-title::after { width: 80px; }
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 0 20px; }
+      section { padding: 80px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#hero" class="logo">EI</a>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="mailto:ei.erdemipek@gmail.com">Hire Me</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </header>
+
+  <div class="side-element side-left">
+    <a href="mailto:ei.erdemipek@gmail.com">ei.erdemipek@gmail.com</a>
+  </div>
+
+  <div class="side-element side-right">
+    <a href="https://github.com/ErdemIpek" target="_blank" rel="noopener" title="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/erdem-ipek-20118b195/" target="_blank" rel="noopener" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://twitter.com/Erdempek16" target="_blank" rel="noopener" title="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+    </a>
+    <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener" title="Fiverr">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><text y="17" font-size="16" font-family="serif" font-weight="bold">f</text></svg>
+    </a>
+  </div>
+
+  <main>
+
+    <section id="hero">
+      <p class="hero-overline">Hi, my name is</p>
+      <h1 class="hero-name">Erdem Ipek.</h1>
+      <h2 class="hero-sub">I build intelligent software.</h2>
+      <p class="hero-desc">
+        I am a software developer and AI enthusiast with a focus on machine learning,
+        full-stack development, and intelligent automation. I turn complex problems into
+        clean, efficient, and scalable solutions.
+      </p>
+      <a class="hero-cta" href="#projects">See My Work</a>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <span class="num">01.</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a Computer Engineering and Electronic Engineering student at
+            <span class="hl">Erciyes University</span>, with a strong focus on
+            artificial intelligence, machine learning, and image processing. My passion
+            is building software that is not just functional but genuinely intelligent.
+          </p>
+          <p>
+            I have worked across the full development stack, from cross-platform mobile
+            applications built with <span class="hl">React Native</span> to handwritten
+            text recognition systems powered by Python and OpenCV. I am currently deepening
+            my backend expertise with <span class="hl">ASP.NET</span> and T-SQL.
+          </p>
+          <p>
+            I also work as a <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">freelance developer on Fiverr</a>,
+            delivering custom software solutions to clients worldwide.
+          </p>
+          <p>Technologies I work with:</p>
+          <ul class="skills-list">
+            <li>Python</li>
+            <li>JavaScript / TypeScript</li>
+            <li>React &amp; React Native</li>
+            <li>ASP.NET / C#</li>
+            <li>Machine Learning / OpenCV</li>
+            <li>T-SQL / SQL</li>
+            <li>Node.js</li>
+            <li>Git &amp; REST APIs</li>
+          </ul>
+        </div>
+        <div>
+          <div class="avatar-box">
+            <div class="avatar-initials">EI</div>
+            <div class="avatar-tag">erdemipek.com</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-title">
+        <span class="num">02.</span>
+        <h2>Experience</h2>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">2022 &ndash; Present</div>
+        <div>
+          <div class="exp-role">Freelance Software Developer</div>
+          <div class="exp-company">Fiverr</div>
+          <p class="exp-desc">
+            Deliver full-stack and automation projects to international clients. Work spans
+            web applications, mobile apps, data processing pipelines, and AI-powered tools.
+            Maintain a strong track record of client satisfaction with fast delivery and
+            high-quality code.
+          </p>
+          <div class="tags">
+            <span>Python</span>
+            <span>React Native</span>
+            <span>JavaScript</span>
+            <span>Machine Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">2021 &ndash; Present</div>
+        <div>
+          <div class="exp-role">Computer Engineering Student</div>
+          <div class="exp-company">Erciyes University</div>
+          <p class="exp-desc">
+            Pursuing a dual degree in Computer Engineering and Electronic Engineering.
+            Core focus areas include algorithms, data structures, operating systems,
+            artificial intelligence, and embedded systems. Continuously applying coursework
+            to hands-on personal projects.
+          </p>
+          <div class="tags">
+            <span>C / C++</span>
+            <span>Python</span>
+            <span>Algorithms</span>
+            <span>Embedded Systems</span>
+            <span>AI Fundamentals</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <span class="num">03.</span>
+        <h2>Things I Have Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="folder-icon">&#128193;</span>
+            <div class="project-links">
+              <a href="https://github.com/ErdemIpek/python-ocr" target="_blank" rel="noopener" title="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-name">Handwritten Text Recognition</div>
+          <p class="project-desc">
+            An OCR system that reads and digitizes handwritten text from images using
+            machine learning and computer vision. Built with Python and OpenCV, trained
+            to achieve high accuracy on real-world handwriting samples.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>OpenCV</span>
+            <span>Machine Learning</span>
+            <span>OCR</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="folder-icon">&#128193;</span>
+            <div class="project-links">
+              <a href="https://github.com/ErdemIpek/ERU-BM-DuyuruApp" target="_blank" rel="noopener" title="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-name">ERU-BM Announcement App</div>
+          <p class="project-desc">
+            A cross-platform mobile application built with React Native for Erciyes
+            University Computer Engineering students. Delivers real-time department
+            announcements, academic news, and schedule updates directly to students.
+          </p>
+          <div class="project-tech">
+            <span>React Native</span>
+            <span>JavaScript</span>
+            <span>Mobile</span>
+            <span>Cross-Platform</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="folder-icon">&#128193;</span>
+            <div class="project-links">
+              <a href="https://github.com/ErdemIpek" target="_blank" rel="noopener" title="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="https://erdemipek.com" target="_blank" rel="noopener" title="Visit Live Site">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-name">Developer Portfolio</div>
+          <p class="project-desc">
+            This site. Designed and built from the ground up with a focus on performance,
+            accessibility, and clean code. Zero external dependencies, pure HTML, CSS,
+            and JavaScript.
+          </p>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="contact-overline">04. What is Next?</p>
+      <h2>Let us Work Together</h2>
+      <p>
+        I am currently open to new opportunities. Whether you have a project in mind,
+        a position to fill, or just want to connect, my inbox is always open.
+      </p>
+      <a class="contact-btn" href="mailto:ei.erdemipek@gmail.com">Say Hello</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/ErdemIpek" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/erdem-ipek-20118b195/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com/Erdempek16" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">Fiverr</a>
+    </div>
+    <p>Designed &amp; Built by Erdem Ipek</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      btn.textContent = nav.classList.contains('open') ? 'Close' : 'Menu';
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      btn.textContent = 'Menu';
+    }));
+  </script>
+
+</body>
+</html>
