@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erdem Ipek | Software Developer</title>
-  <meta name="description" content="Erdem Ipek - Software Developer specializing in AI, Machine Learning, and Full-Stack Development." />
+  <title>Erdem İpek | Robotics Software Engineer</title>
+  <meta name="description" content="Erdem İpek — Robotics Software Engineer & Team Lead at RBW. ROS2, Modbus, EtherNet/IP, AI-driven perception, welding & grinding automation, edge IoT." />
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -166,7 +166,7 @@
     }
 
     .hero-desc {
-      max-width: 540px;
+      max-width: 560px;
       margin-top: 24px;
       font-size: 17px;
       line-height: 1.8;
@@ -299,6 +299,29 @@
 
     .exp-desc { font-size: 15px; line-height: 1.75; }
 
+    .exp-list {
+      margin: 8px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .exp-list li {
+      font-size: 15px;
+      line-height: 1.75;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .exp-list li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-size: 13px;
+      top: 3px;
+    }
+
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -360,7 +383,12 @@
       margin-bottom: 24px;
     }
 
-    .folder-icon { font-size: 36px; line-height: 1; }
+    .project-icon {
+      width: 40px;
+      height: 40px;
+      color: var(--green);
+      opacity: .9;
+    }
 
     .project-links { display: flex; gap: 14px; }
 
@@ -585,12 +613,13 @@
 
     <section id="hero">
       <p class="hero-overline">Hi, my name is</p>
-      <h1 class="hero-name">Erdem Ipek.</h1>
-      <h2 class="hero-sub">I build intelligent software.</h2>
+      <h1 class="hero-name">Erdem İpek.</h1>
+      <h2 class="hero-sub">I engineer industrial robots.</h2>
       <p class="hero-desc">
-        I am a software developer and AI enthusiast with a focus on machine learning,
-        full-stack development, and intelligent automation. I turn complex problems into
-        clean, efficient, and scalable solutions.
+        Robotics Software Engineer &amp; Team Lead at <span style="color:var(--green)">RBW</span>.
+        I build the software layer between industrial robots and the real world —
+        from low-level machine communication to AI-driven perception, cloud-connected data pipelines,
+        and ROS2-based control systems for welding and grinding automation.
       </p>
       <a class="hero-cta" href="#projects">See My Work</a>
     </section>
@@ -603,31 +632,36 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a Computer Engineering and Electronic Engineering student at
-            <span class="hl">Erciyes University</span>, with a strong focus on
-            artificial intelligence, machine learning, and image processing. My passion
-            is building software that is not just functional but genuinely intelligent.
+            I'm a software engineer specializing in industrial robotics and automation at
+            <span class="hl">RBW</span>, where I lead the software team. I build
+            <span class="hl">ROS2</span>-based control systems for robotic welding and grinding cells,
+            and implement deep communication interfaces with premium welding machines — Kemppi, Fronius,
+            ESAB, EWM, and Kolarc — over <span class="hl">Modbus TCP</span> and
+            <span class="hl">EtherNet/IP</span>.
           </p>
           <p>
-            I have worked across the full development stack, from cross-platform mobile
-            applications built with <span class="hl">React Native</span> to handwritten
-            text recognition systems powered by Python and OpenCV. I am currently deepening
-            my backend expertise with <span class="hl">ASP.NET</span> and T-SQL.
+            I also integrate <span class="hl">AI-driven perception and decision-making</span> into
+            industrial robotic cells, and architect end-to-end
+            <span class="hl">edge connectivity pipelines</span> that bridge machine controllers to
+            cloud platforms: real-time parameter capture, data normalisation, and delivery for process
+            monitoring and traceability.
           </p>
           <p>
-            I also work as a <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">freelance developer on Fiverr</a>,
-            delivering custom software solutions to clients worldwide.
+            I hold dual degrees in Computer Engineering and Electronic Engineering from
+            <span class="hl">Erciyes University</span>, and I also take on
+            <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">freelance projects</a>
+            for clients internationally.
           </p>
           <p>Technologies I work with:</p>
           <ul class="skills-list">
             <li>Python</li>
-            <li>JavaScript / TypeScript</li>
-            <li>React &amp; React Native</li>
-            <li>ASP.NET / C#</li>
-            <li>Machine Learning / OpenCV</li>
-            <li>T-SQL / SQL</li>
-            <li>Node.js</li>
-            <li>Git &amp; REST APIs</li>
+            <li>ROS2</li>
+            <li>Modbus TCP</li>
+            <li>EtherNet/IP</li>
+            <li>Flutter</li>
+            <li>Linux</li>
+            <li>AI / Perception</li>
+            <li>Edge IoT / Cloud</li>
           </ul>
         </div>
         <div>
@@ -646,21 +680,44 @@
       </div>
 
       <div class="exp-item">
+        <div class="exp-date">2024 &ndash; Present</div>
+        <div>
+          <div class="exp-role">Robotics Software Engineer &amp; Team Lead</div>
+          <div class="exp-company">RBW</div>
+          <ul class="exp-list">
+            <li>Lead the software team building ROS2-based control systems for industrial robotic welding and grinding automation.</li>
+            <li>Develop Modbus TCP and EtherNet/IP communication interfaces for premium welding platforms: Kemppi, Fronius, ESAB, EWM, and Kolarc.</li>
+            <li>Integrate AI-driven perception and decision-making into robotic cells for process optimisation and adaptive control.</li>
+            <li>Architect end-to-end edge connectivity pipelines: real-time parameter capture, data normalisation, and delivery to cloud platforms for monitoring and traceability.</li>
+            <li>Build robot controller integration and software tooling across the full automation stack.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span>
+            <span>ROS2</span>
+            <span>Modbus TCP</span>
+            <span>EtherNet/IP</span>
+            <span>Flutter</span>
+            <span>Linux</span>
+            <span>AI / Perception</span>
+            <span>Edge IoT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
         <div class="exp-date">2022 &ndash; Present</div>
         <div>
           <div class="exp-role">Freelance Software Developer</div>
           <div class="exp-company">Fiverr</div>
-          <p class="exp-desc">
-            Deliver full-stack and automation projects to international clients. Work spans
-            web applications, mobile apps, data processing pipelines, and AI-powered tools.
-            Maintain a strong track record of client satisfaction with fast delivery and
-            high-quality code.
-          </p>
+          <ul class="exp-list">
+            <li>Deliver full-stack, automation, and data projects for international clients.</li>
+            <li>Work spans web applications, mobile apps, data pipelines, and custom tooling.</li>
+          </ul>
           <div class="tags">
             <span>Python</span>
             <span>React Native</span>
             <span>JavaScript</span>
-            <span>Machine Learning</span>
+            <span>C#</span>
           </div>
         </div>
       </div>
@@ -668,20 +725,17 @@
       <div class="exp-item">
         <div class="exp-date">2021 &ndash; Present</div>
         <div>
-          <div class="exp-role">Computer Engineering Student</div>
+          <div class="exp-role">Computer &amp; Electronic Engineering Student</div>
           <div class="exp-company">Erciyes University</div>
-          <p class="exp-desc">
-            Pursuing a dual degree in Computer Engineering and Electronic Engineering.
-            Core focus areas include algorithms, data structures, operating systems,
-            artificial intelligence, and embedded systems. Continuously applying coursework
-            to hands-on personal projects.
-          </p>
+          <ul class="exp-list">
+            <li>Pursuing dual degrees in Computer Engineering and Electronic Engineering.</li>
+            <li>Focus areas: algorithms, embedded systems, artificial intelligence, and operating systems.</li>
+          </ul>
           <div class="tags">
             <span>C / C++</span>
             <span>Python</span>
-            <span>Algorithms</span>
             <span>Embedded Systems</span>
-            <span>AI Fundamentals</span>
+            <span>Algorithms</span>
           </div>
         </div>
       </div>
@@ -697,30 +751,96 @@
 
         <div class="project-card">
           <div class="project-top">
-            <span class="folder-icon">&#128193;</span>
-            <div class="project-links">
-              <a href="https://github.com/ErdemIpek/python-ocr" target="_blank" rel="noopener" title="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
+            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+            <div class="project-links"></div>
           </div>
-          <div class="project-name">Handwritten Text Recognition</div>
+          <div class="project-name">Welding Machine Interface Suite</div>
           <p class="project-desc">
-            An OCR system that reads and digitizes handwritten text from images using
-            machine learning and computer vision. Built with Python and OpenCV, trained
-            to achieve high accuracy on real-world handwriting samples.
+            Modbus TCP and EtherNet/IP protocol drivers for premium industrial welding machines —
+            Kemppi, Fronius, ESAB, EWM, and Kolarc. Enables the robot controller to command welding
+            parameters, read live process feedback, and handle faults in real time. Built with deep
+            knowledge of each platform's data model and communication architecture.
           </p>
           <div class="project-tech">
             <span>Python</span>
-            <span>OpenCV</span>
-            <span>Machine Learning</span>
-            <span>OCR</span>
+            <span>Modbus TCP</span>
+            <span>EtherNet/IP</span>
+            <span>ROS2</span>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-top">
-            <span class="folder-icon">&#128193;</span>
+            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+            <div class="project-links"></div>
+          </div>
+          <div class="project-name">Weld Data Pipeline &amp; Edge Connectivity</div>
+          <p class="project-desc">
+            End-to-end pipeline bridging machine controllers to cloud platforms. Captures real-time welding
+            and grinding parameters at the edge, normalises data across machine types and vendors, and delivers
+            structured streams for process monitoring, traceability, and analytics.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Edge IoT</span>
+            <span>Linux</span>
+            <span>Cloud</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a5 5 0 0 1 5 5v3H7V7a5 5 0 0 1 5-5z"/><rect x="3" y="10" width="18" height="11" rx="2"/><line x1="12" y1="14" x2="12" y2="17"/>
+            </svg>
+            <div class="project-links"></div>
+          </div>
+          <div class="project-name">AI Perception for Robotic Cells</div>
+          <p class="project-desc">
+            AI-driven perception and decision-making systems integrated into industrial robotic welding and
+            grinding cells. Enables robots to adapt to workpiece variation, optimise process parameters
+            on the fly, and make autonomous decisions based on real-time sensor input.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>ROS2</span>
+            <span>AI / Perception</span>
+            <span>Linux</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+            <div class="project-links">
+              <a href="https://github.com/ErdemIpek/gnss-visualization" target="_blank" rel="noopener" title="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-name">GNSS Visualization</div>
+          <p class="project-desc">
+            Python tool for parsing, processing, and visualizing Global Navigation Satellite System data.
+            Useful for tracking positional telemetry from mobile robots and field equipment.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>GNSS</span>
+            <span>Data Visualization</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
             <div class="project-links">
               <a href="https://github.com/ErdemIpek/ERU-BM-DuyuruApp" target="_blank" rel="noopener" title="View on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -729,40 +849,13 @@
           </div>
           <div class="project-name">ERU-BM Announcement App</div>
           <p class="project-desc">
-            A cross-platform mobile application built with React Native for Erciyes
-            University Computer Engineering students. Delivers real-time department
-            announcements, academic news, and schedule updates directly to students.
+            Cross-platform mobile app (React Native) for Erciyes University Computer Engineering students.
+            Delivers real-time department announcements and schedule updates directly to students' phones.
           </p>
           <div class="project-tech">
             <span>React Native</span>
             <span>JavaScript</span>
-            <span>Mobile</span>
             <span>Cross-Platform</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <span class="folder-icon">&#128193;</span>
-            <div class="project-links">
-              <a href="https://github.com/ErdemIpek" target="_blank" rel="noopener" title="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-              <a href="https://erdemipek.com" target="_blank" rel="noopener" title="Visit Live Site">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-name">Developer Portfolio</div>
-          <p class="project-desc">
-            This site. Designed and built from the ground up with a focus on performance,
-            accessibility, and clean code. Zero external dependencies, pure HTML, CSS,
-            and JavaScript.
-          </p>
-          <div class="project-tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
           </div>
         </div>
 
@@ -773,8 +866,8 @@
       <p class="contact-overline">04. What is Next?</p>
       <h2>Let us Work Together</h2>
       <p>
-        I am currently open to new opportunities. Whether you have a project in mind,
-        a position to fill, or just want to connect, my inbox is always open.
+        I am open to challenging roles in industrial robotics, automation software, and AI-driven systems.
+        Whether you have a project, a position, or just want to talk tech — my inbox is open.
       </p>
       <a class="contact-btn" href="mailto:ei.erdemipek@gmail.com">Say Hello</a>
     </section>
@@ -788,7 +881,7 @@
       <a href="https://twitter.com/Erdempek16" target="_blank" rel="noopener">Twitter</a>
       <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">Fiverr</a>
     </div>
-    <p>Designed &amp; Built by Erdem Ipek</p>
+    <p>Designed &amp; Built by Erdem İpek</p>
   </footer>
 
   <script>
