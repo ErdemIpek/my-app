@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erdem İpek | Robotics Software Engineer</title>
-  <meta name="description" content="Erdem İpek — Robotics Software Engineer & Team Lead at RBW. ROS2, Modbus, EtherNet/IP, AI-driven perception, welding & grinding automation, edge IoT." />
+  <title>Erdem Ipek | Software Engineer</title>
+  <meta name="description" content="Erdem Ipek - Software Engineer. Python, Flutter, ROS2, robotics, automation, AI and more." />
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,8 +20,8 @@
       --slate-light:#a8b2d8;
       --white:      #ccd6f6;
       --white-pure: #e6f1ff;
-      --green:      #FF6600;
-      --green-tint: rgba(255,102,0,.08);
+      --accent:     #FF6600;
+      --accent-tint:rgba(255,102,0,.08);
       --font-sans:  'Inter', sans-serif;
       --font-mono:  'Fira Code', monospace;
       --transition: all .25s cubic-bezier(.645,.045,.355,1);
@@ -38,8 +38,8 @@
       line-height: 1.7;
     }
 
-    a { color: var(--green); text-decoration: none; transition: var(--transition); }
-    a:hover { color: var(--green); opacity: .8; }
+    a { color: var(--accent); text-decoration: none; transition: var(--transition); }
+    a:hover { color: var(--accent); opacity: .8; }
 
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--navy); }
@@ -57,14 +57,14 @@
       background: rgba(10,25,47,.92);
       backdrop-filter: blur(12px);
       z-index: 100;
-      border-bottom: 1px solid rgba(100,255,218,.07);
+      border-bottom: 1px solid rgba(255,102,0,.07);
     }
 
     .logo {
       font-family: var(--font-mono);
       font-size: 22px;
       font-weight: 500;
-      color: var(--green);
+      color: var(--accent);
       letter-spacing: 1px;
     }
 
@@ -76,21 +76,21 @@
       color: var(--slate-light);
       letter-spacing: .05em;
     }
-    nav a:hover { color: var(--green); opacity: 1; }
+    nav a:hover { color: var(--accent); opacity: 1; }
 
     nav .cta {
-      border: 1px solid var(--green);
-      color: var(--green);
+      border: 1px solid var(--accent);
+      color: var(--accent);
       padding: 10px 20px;
       border-radius: 4px;
     }
-    nav .cta:hover { background: var(--green-tint); }
+    nav .cta:hover { background: var(--accent-tint); }
 
     .menu-btn {
       display: none;
       background: none;
-      border: 1px solid var(--green);
-      color: var(--green);
+      border: 1px solid var(--accent);
+      color: var(--accent);
       padding: 8px 14px;
       border-radius: 4px;
       cursor: pointer;
@@ -115,7 +115,7 @@
     .section-title .num {
       font-family: var(--font-mono);
       font-size: 18px;
-      color: var(--green);
+      color: var(--accent);
     }
 
     .section-title h2 {
@@ -141,12 +141,36 @@
       flex-direction: column;
       justify-content: center;
       padding-top: var(--nav-h);
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10,25,47,.82);
+      z-index: -1;
+      pointer-events: none;
     }
 
     .hero-overline {
       font-family: var(--font-mono);
       font-size: 16px;
-      color: var(--green);
+      color: var(--accent);
       margin-bottom: 20px;
     }
 
@@ -175,8 +199,8 @@
     .hero-cta {
       display: inline-block;
       margin-top: 48px;
-      border: 1px solid var(--green);
-      color: var(--green);
+      border: 1px solid var(--accent);
+      color: var(--accent);
       font-family: var(--font-mono);
       font-size: 14px;
       padding: 18px 40px;
@@ -185,7 +209,7 @@
     }
 
     .hero-cta:hover {
-      background: var(--green-tint);
+      background: var(--accent-tint);
       opacity: 1;
       transform: translateY(-3px);
     }
@@ -205,9 +229,9 @@
     }
 
     .about-text a { border-bottom: 1px solid transparent; }
-    .about-text a:hover { border-color: var(--green); opacity: 1; }
+    .about-text a:hover { border-color: var(--accent); opacity: 1; }
 
-    .hl { color: var(--green); }
+    .hl { color: var(--accent); }
 
     .skills-list {
       display: grid;
@@ -229,7 +253,7 @@
       content: '>';
       position: absolute;
       left: 0;
-      color: var(--green);
+      color: var(--accent);
     }
 
     .avatar-box {
@@ -245,13 +269,13 @@
 
     .avatar-box:hover {
       transform: translateY(-4px);
-      border-color: rgba(100,255,218,.2);
+      border-color: rgba(255,102,0,.2);
     }
 
     .avatar-initials {
       font-size: 68px;
       font-weight: 700;
-      color: var(--green);
+      color: var(--accent);
       font-family: var(--font-mono);
       line-height: 1;
     }
@@ -293,7 +317,7 @@
     .exp-company {
       font-family: var(--font-mono);
       font-size: 13px;
-      color: var(--green);
+      color: var(--accent);
       margin-bottom: 12px;
     }
 
@@ -314,10 +338,11 @@
     }
 
     .exp-list li::before {
-      content: '▹';
+      content: '>';
       position: absolute;
       left: 0;
-      color: var(--green);
+      color: var(--accent);
+      font-family: var(--font-mono);
       font-size: 13px;
       top: 3px;
     }
@@ -332,9 +357,9 @@
     .tags span {
       font-family: var(--font-mono);
       font-size: 12px;
-      color: var(--green);
-      background: var(--green-tint);
-      border: 1px solid rgba(100,255,218,.18);
+      color: var(--accent);
+      background: var(--accent-tint);
+      border: 1px solid rgba(255,102,0,.18);
       padding: 4px 12px;
       border-radius: 20px;
     }
@@ -363,14 +388,14 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 2px;
-      background: linear-gradient(90deg, var(--green), transparent);
+      background: linear-gradient(90deg, var(--accent), transparent);
       opacity: 0;
       transition: var(--transition);
     }
 
     .project-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(100,255,218,.22);
+      border-color: rgba(255,102,0,.22);
       box-shadow: 0 20px 60px -15px rgba(2,12,27,.7);
     }
 
@@ -384,9 +409,9 @@
     }
 
     .project-icon {
-      width: 40px;
-      height: 40px;
-      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: 28px;
+      color: var(--accent);
       opacity: .9;
     }
 
@@ -399,7 +424,7 @@
       transition: var(--transition);
     }
 
-    .project-links a:hover { color: var(--green); opacity: 1; }
+    .project-links a:hover { color: var(--accent); opacity: 1; }
 
     .project-name {
       font-size: 18px;
@@ -409,7 +434,7 @@
       transition: var(--transition);
     }
 
-    .project-card:hover .project-name { color: var(--green); }
+    .project-card:hover .project-name { color: var(--accent); }
 
     .project-desc {
       font-size: 14px;
@@ -441,7 +466,7 @@
     .contact-overline {
       font-family: var(--font-mono);
       font-size: 14px;
-      color: var(--green);
+      color: var(--accent);
       margin-bottom: 18px;
     }
 
@@ -460,8 +485,8 @@
 
     .contact-btn {
       display: inline-block;
-      border: 1px solid var(--green);
-      color: var(--green);
+      border: 1px solid var(--accent);
+      color: var(--accent);
       font-family: var(--font-mono);
       font-size: 14px;
       padding: 20px 52px;
@@ -470,7 +495,7 @@
     }
 
     .contact-btn:hover {
-      background: var(--green-tint);
+      background: var(--accent-tint);
       opacity: 1;
       transform: translateY(-3px);
     }
@@ -496,7 +521,7 @@
       transition: var(--transition);
     }
 
-    .social-links a:hover { color: var(--green); opacity: 1; }
+    .social-links a:hover { color: var(--accent); opacity: 1; }
 
     footer p {
       font-family: var(--font-mono);
@@ -533,7 +558,7 @@
       transition: var(--transition);
     }
 
-    .side-left a:hover { color: var(--green); opacity: 1; transform: translateY(-4px); }
+    .side-left a:hover { color: var(--accent); opacity: 1; transform: translateY(-4px); }
 
     .side-right a {
       color: var(--slate);
@@ -542,7 +567,7 @@
       transition: var(--transition);
     }
 
-    .side-right a:hover { color: var(--green); opacity: 1; transform: translateY(-4px); }
+    .side-right a:hover { color: var(--accent); opacity: 1; transform: translateY(-4px); }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -577,6 +602,11 @@
   </style>
 </head>
 <body>
+
+  <video class="video-bg" autoplay muted loop playsinline preload="auto">
+    <source src="https://video.wixstatic.com/video/b2caf0_04afc36ce64c4b5c8950e8bf79c074bb/1080p/mp4/file.mp4" type="video/mp4" />
+  </video>
+  <div class="video-overlay"></div>
 
   <header>
     <a href="#hero" class="logo">EI</a>
@@ -613,13 +643,13 @@
 
     <section id="hero">
       <p class="hero-overline">Hi, my name is</p>
-      <h1 class="hero-name">Erdem İpek.</h1>
-      <h2 class="hero-sub">I engineer industrial robots.</h2>
+      <h1 class="hero-name">Erdem Ipek.</h1>
+      <h2 class="hero-sub">I write code that moves machines.</h2>
       <p class="hero-desc">
-        Robotics Software Engineer &amp; Team Lead at <span style="color:var(--green)">RBW</span>.
-        I build the software layer between industrial robots and the real world —
-        from low-level machine communication to AI-driven perception, cloud-connected data pipelines,
-        and ROS2-based control systems for welding and grinding automation.
+        Software Engineer at <span style="color:var(--accent)">RBW</span>.
+        I build real-time robotics software, autonomous systems, and full-stack applications
+        with Python, Flutter, and ROS2. From welding cobots to agricultural robots to
+        65+ delivered freelance projects.
       </p>
       <a class="hero-cta" href="#projects">See My Work</a>
     </section>
@@ -632,35 +662,34 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I'm a software engineer specializing in industrial robotics and automation at
-            <span class="hl">RBW</span>, where I lead the software team. I build
-            <span class="hl">ROS2</span>-based control systems for robotic welding and grinding cells,
-            and implement deep communication interfaces with premium welding machines — Kemppi, Fronius,
-            ESAB, EWM, and Kolarc — over <span class="hl">Modbus TCP</span> and
-            <span class="hl">EtherNet/IP</span>.
+            I'm a software engineer at <span class="hl">RBW</span> where I develop
+            optimized <span class="hl">Python</span> and <span class="hl">Flutter</span>
+            code for real-time robotics applications. I work with cross-functional teams
+            to build communication systems, troubleshoot and debug complex robotic platforms,
+            and maintain best practices across the stack.
           </p>
           <p>
-            I also integrate <span class="hl">AI-driven perception and decision-making</span> into
-            industrial robotic cells, and architect end-to-end
-            <span class="hl">edge connectivity pipelines</span> that bridge machine controllers to
-            cloud platforms: real-time parameter capture, data normalisation, and delivery for process
-            monitoring and traceability.
+            Before RBW, I built autonomous agricultural vehicles at Daphne Bilisim,
+            developed an inventory tracking system at ASKi, created a licence plate recognition
+            model at Erciyes University, and built open data portals and search systems
+            at Kayseri Ulasim.
           </p>
           <p>
-            I also take on
+            I also deliver
             <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">freelance projects</a>
-            for clients internationally.
+            internationally on Fiverr with 65+ projects delivered, 50+ satisfied customers,
+            and zero negative reviews.
           </p>
           <p>Technologies I work with:</p>
           <ul class="skills-list">
             <li>Python</li>
-            <li>ROS2</li>
-            <li>Modbus TCP</li>
-            <li>EtherNet/IP</li>
             <li>Flutter</li>
+            <li>ROS2</li>
+            <li>PostgreSQL</li>
+            <li>.NET</li>
+            <li>Arduino</li>
+            <li>OpenCV / AI</li>
             <li>Linux</li>
-            <li>AI / Perception</li>
-            <li>Edge IoT / Cloud</li>
           </ul>
         </div>
         <div>
@@ -679,47 +708,131 @@
       </div>
 
       <div class="exp-item">
-        <div class="exp-date">2024 &ndash; Present</div>
+        <div class="exp-date">Sep 2024 &ndash; Present</div>
         <div>
-          <div class="exp-role">Robotics Software Engineer &amp; Team Lead</div>
-          <div class="exp-company">RBW</div>
+          <div class="exp-role">R&amp;D Specialist, Software Developer</div>
+          <div class="exp-company">RBW &middot; Full-time &middot; Istanbul, Turkey / Seoul, South Korea</div>
           <ul class="exp-list">
-            <li>Lead the software team building ROS2-based control systems for industrial robotic welding and grinding automation.</li>
-            <li>Develop Modbus TCP and EtherNet/IP communication interfaces for premium welding platforms: Kemppi, Fronius, ESAB, EWM, and Kolarc.</li>
-            <li>Integrate AI-driven perception and decision-making into robotic cells for process optimisation and adaptive control.</li>
-            <li>Architect end-to-end edge connectivity pipelines: real-time parameter capture, data normalisation, and delivery to cloud platforms for monitoring and traceability.</li>
-            <li>Build robot controller integration and software tooling across the full automation stack.</li>
+            <li>Collaborated with cross-functional teams to deliver optimized Python and Flutter code for real-time robotics applications.</li>
+            <li>Troubleshot, tested, and debugged systems to ensure optimal communication and performance.</li>
+            <li>Documented code and processes, providing ongoing technical support to team members and maintaining best practices in robotic technology.</li>
           </ul>
           <div class="tags">
             <span>Python</span>
-            <span>ROS2</span>
-            <span>Modbus TCP</span>
-            <span>EtherNet/IP</span>
             <span>Flutter</span>
-            <span>Linux</span>
-            <span>AI / Perception</span>
-            <span>Edge IoT</span>
           </div>
         </div>
       </div>
 
       <div class="exp-item">
-        <div class="exp-date">2022 &ndash; Present</div>
+        <div class="exp-date">Sep 2024 &ndash; Oct 2024</div>
         <div>
-          <div class="exp-role">Freelance Software Developer</div>
-          <div class="exp-company">Fiverr</div>
+          <div class="exp-role">Computer Engineer</div>
+          <div class="exp-company">Ankara Su ve Kanalizasyon Idaresi (ASKi) &middot; Contract &middot; Ankara, Turkey</div>
           <ul class="exp-list">
-            <li>Deliver full-stack, automation, and data projects for international clients.</li>
-            <li>Work spans web applications, mobile apps, data pipelines, and custom tooling.</li>
+            <li>Designed and developed an Inventory Tracking System.</li>
+            <li>Managing and improving companies network structure.</li>
+            <li>Updating and testing critical web services.</li>
           </ul>
           <div class="tags">
             <span>Python</span>
-            <span>Flutter</span>
-            <span>ROS2</span>
+            <span>PostgreSQL</span>
           </div>
         </div>
       </div>
 
+      <div class="exp-item">
+        <div class="exp-date">May 2024 &ndash; Aug 2024</div>
+        <div>
+          <div class="exp-role">Computer Engineer</div>
+          <div class="exp-company">Daphne Bilisim Limited Sirketi &middot; Full-time &middot; Kayseri</div>
+          <ul class="exp-list">
+            <li>Autonomous agricultural vehicle development: autonomous navigation, long-distance communication, and video transmission (Python, Arduino, LIDAR, Jetson NANO, Pixhawk, ESC, GNSS).</li>
+            <li>Development of own mission planning software and ground station software.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span>
+            <span>Flutter</span>
+            <span>Arduino</span>
+            <span>LIDAR</span>
+            <span>Jetson NANO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Aug 2023 &ndash; Jul 2024</div>
+        <div>
+          <div class="exp-role">Computer Engineer</div>
+          <div class="exp-company">Erciyes University &middot; Full-time &middot; Kayseri</div>
+          <ul class="exp-list">
+            <li>Developed own Licence Plate Recognition (LPR) model using Python, PyTorch, YOLO. Reached over 95% accuracy.</li>
+            <li>Developed and released campus parking lot system (both Frontend and Backend) using .NET, .NET MVC.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span>
+            <span>PyTorch</span>
+            <span>YOLO</span>
+            <span>.NET</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Jan 2022 &ndash; Jul 2023</div>
+        <div>
+          <div class="exp-role">Analyst Computer Engineer</div>
+          <div class="exp-company">Kayseri Ulasim A.S. &middot; Full-time &middot; Kayseri, Turkey</div>
+          <ul class="exp-list">
+            <li>Design and implementation of Kayseri Transportation Inc.'s Open Data Web Portal: CKAN.</li>
+            <li>Development and optimization of Elasticsearch search functionality.</li>
+            <li>Development/correction of bus and tramway services for the search engine server.</li>
+            <li>Bus scheduling analysis: single-page application using JavaScript and ReactJS.</li>
+            <li>Social engineering to listen to passenger complaints, understand the issue, and resolve it.</li>
+          </ul>
+          <div class="tags">
+            <span>.NET</span>
+            <span>Elasticsearch</span>
+            <span>JavaScript</span>
+            <span>ReactJS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Jan 2021 &ndash; Jul 2021</div>
+        <div>
+          <div class="exp-role">Junior Computer Engineer</div>
+          <div class="exp-company">Kayseri Seker &middot; Intern</div>
+          <ul class="exp-list">
+            <li>Development of Autonomous Agricultural Robot software: TUBITAK 3181328 project.</li>
+            <li>Application of AI and image processing techniques: Python, OpenCV, TensorFlow.</li>
+            <li>Disease detection and plant counting.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>OpenCV</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">2020 &ndash; Present</div>
+        <div>
+          <div class="exp-role">Freelance Developer</div>
+          <div class="exp-company">Fiverr &middot; Remote</div>
+          <ul class="exp-list">
+            <li>Delivery of 65+ software projects with 50+ satisfied customers.</li>
+            <li>Zero negative reviews, all feedback is 5-star.</li>
+            <li>Understanding various client requirements: project management and planning.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span>
+            <span>Flutter</span>
+          </div>
+        </div>
+      </div>
 
     </section>
 
@@ -732,17 +845,14 @@
 
         <div class="project-card">
           <div class="project-top">
-            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-            </svg>
+            <div class="project-icon">//</div>
             <div class="project-links"></div>
           </div>
-          <div class="project-name">Welding Machine Interface Suite</div>
+          <div class="project-name">Welding Cobot Communication Suite</div>
           <p class="project-desc">
-            Modbus TCP and EtherNet/IP protocol drivers for premium industrial welding machines —
-            Kemppi, Fronius, ESAB, EWM, and Kolarc. Enables the robot controller to command welding
-            parameters, read live process feedback, and handle faults in real time. Built with deep
-            knowledge of each platform's data model and communication architecture.
+            Modbus TCP and EtherNet/IP protocol drivers for industrial welding machines
+            including Kemppi, Fronius, ESAB, EWM, and Kolarc. Enables the robot controller to command welding
+            parameters, read live process feedback, and handle faults in real time.
           </p>
           <div class="project-tech">
             <span>Python</span>
@@ -754,69 +864,78 @@
 
         <div class="project-card">
           <div class="project-top">
-            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-            </svg>
+            <div class="project-icon">//</div>
             <div class="project-links"></div>
           </div>
-          <div class="project-name">Weld Data Pipeline &amp; Edge Connectivity</div>
+          <div class="project-name">Autonomous Agriculture Robot</div>
           <p class="project-desc">
-            End-to-end pipeline bridging machine controllers to cloud platforms. Captures real-time welding
-            and grinding parameters at the edge, normalises data across machine types and vendors, and delivers
-            structured streams for process monitoring, traceability, and analytics.
+            Full autonomous agricultural vehicle: motor control software, ground station software,
+            autonomous driving algorithm, and sockets for transmitting data and video.
+            Built with Python, Arduino, LIDAR, Jetson NANO, Pixhawk, ESC, and GNSS.
           </p>
           <div class="project-tech">
             <span>Python</span>
-            <span>Edge IoT</span>
-            <span>Linux</span>
-            <span>Cloud</span>
+            <span>Flutter</span>
+            <span>Arduino</span>
+            <span>LIDAR</span>
+            <span>Jetson NANO</span>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-top">
-            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a5 5 0 0 1 5 5v3H7V7a5 5 0 0 1 5-5z"/><rect x="3" y="10" width="18" height="11" rx="2"/><line x1="12" y1="14" x2="12" y2="17"/>
-            </svg>
+            <div class="project-icon">//</div>
             <div class="project-links"></div>
           </div>
-          <div class="project-name">AI Perception for Robotic Cells</div>
+          <div class="project-name">Licence Plate Recognition</div>
           <p class="project-desc">
-            AI-driven perception and decision-making systems integrated into industrial robotic welding and
-            grinding cells. Enables robots to adapt to workpiece variation, optimise process parameters
-            on the fly, and make autonomous decisions based on real-time sensor input.
+            Custom LPR model using Python, PyTorch, and YOLO achieving over 95% accuracy.
+            Integrated into a full campus parking lot system with .NET MVC frontend and backend.
           </p>
           <div class="project-tech">
             <span>Python</span>
-            <span>ROS2</span>
-            <span>AI / Perception</span>
-            <span>Linux</span>
+            <span>PyTorch</span>
+            <span>YOLO</span>
+            <span>.NET</span>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-top">
-            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
-            </svg>
-            <div class="project-links">
-              <a href="https://github.com/ErdemIpek/gnss-visualization" target="_blank" rel="noopener" title="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
+            <div class="project-icon">//</div>
+            <div class="project-links"></div>
           </div>
-          <div class="project-name">GNSS Visualization</div>
+          <div class="project-name">TUBITAK Autonomous Robot</div>
           <p class="project-desc">
-            Python tool for parsing, processing, and visualizing Global Navigation Satellite System data.
-            Useful for tracking positional telemetry from mobile robots and field equipment.
+            Autonomous agricultural robot software for TUBITAK project 3181328.
+            AI and image processing for disease detection and plant counting
+            using Python, OpenCV, and TensorFlow.
           </p>
           <div class="project-tech">
             <span>Python</span>
-            <span>GNSS</span>
-            <span>Data Visualization</span>
+            <span>TensorFlow</span>
+            <span>OpenCV</span>
           </div>
         </div>
 
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon">//</div>
+            <div class="project-links"></div>
+          </div>
+          <div class="project-name">Open Data Web Portal</div>
+          <p class="project-desc">
+            Kayseri Transportation's open data portal built on CKAN.
+            Elasticsearch search optimization, bus and tramway service integration,
+            and a bus scheduling analysis SPA with JavaScript and ReactJS.
+          </p>
+          <div class="project-tech">
+            <span>.NET</span>
+            <span>Elasticsearch</span>
+            <span>ReactJS</span>
+            <span>CKAN</span>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -825,8 +944,8 @@
       <p class="contact-overline">04. What is Next?</p>
       <h2>Let us Work Together</h2>
       <p>
-        I am open to challenging roles in industrial robotics, automation software, and AI-driven systems.
-        Whether you have a project, a position, or just want to talk tech — my inbox is open.
+        I am open to challenging roles in software engineering, robotics, automation, and AI.
+        Whether you have a project, a position, or just want to talk tech, my inbox is open.
       </p>
       <a class="contact-btn" href="mailto:ei.erdemipek@gmail.com">Say Hello</a>
     </section>
@@ -840,7 +959,7 @@
       <a href="https://twitter.com/Erdempek16" target="_blank" rel="noopener">Twitter</a>
       <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">Fiverr</a>
     </div>
-    <p>Designed &amp; Built by Erdem İpek</p>
+    <p>Designed &amp; Built by Erdem Ipek</p>
   </footer>
 
   <script>
