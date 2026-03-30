@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Erdem Ipek | Software Engineer</title>
-  <meta name="description" content="Erdem Ipek - Software Engineer. Python, Flutter, ROS2, robotics, automation, AI and more." />
+  <meta name="description" content="Erdem Ipek — software engineer focused on robotics, real-time systems, and industrial automation." />
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,10 +62,11 @@
 
     .logo {
       font-family: var(--font-mono);
-      font-size: 22px;
+      font-size: clamp(15px, 2.8vw, 20px);
       font-weight: 500;
       color: var(--accent);
-      letter-spacing: 1px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
     }
 
     nav { display: flex; align-items: center; gap: 36px; }
@@ -273,11 +274,12 @@
     }
 
     .avatar-initials {
-      font-size: 68px;
-      font-weight: 700;
+      font-size: 52px;
+      font-weight: 600;
       color: var(--accent);
       font-family: var(--font-mono);
       line-height: 1;
+      letter-spacing: -0.02em;
     }
 
     .avatar-tag {
@@ -529,6 +531,107 @@
       color: var(--slate);
     }
 
+    /* PARTNER SHOWCASE */
+    .partner-showcase {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px 56px;
+    }
+
+    .partner-showcase-inner {
+      background: var(--navy-light);
+      border: 1px solid var(--navy-mid);
+      border-radius: 6px;
+      padding: 28px 32px 32px;
+    }
+
+    .partner-showcase-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--slate);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 28px 40px;
+    }
+
+    .partner-logos img {
+      height: 38px;
+      width: auto;
+      max-width: 130px;
+      object-fit: contain;
+      filter: grayscale(1) opacity(0.82);
+      transition: var(--transition);
+    }
+
+    .partner-logos img:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    .rainbow-block {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--navy-mid);
+      text-align: center;
+    }
+
+    .rainbow-block .partner-showcase-label {
+      margin-bottom: 14px;
+    }
+
+    .rainbow-hero-logo {
+      height: 40px;
+      width: auto;
+      max-width: 240px;
+      object-fit: contain;
+      filter: grayscale(1) opacity(0.82);
+      transition: var(--transition);
+    }
+
+    .rainbow-hero-logo:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    .partner-disclaimer {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--slate);
+      text-align: center;
+      margin-top: 16px;
+      opacity: 0.75;
+    }
+
+    .contact-hint {
+      font-size: 14px;
+      color: var(--slate);
+      margin-bottom: 20px;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.65;
+    }
+
+    button.contact-btn {
+      background: transparent;
+      border: 1px solid var(--accent);
+      font: inherit;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--accent);
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
     /* SIDE ELEMENTS */
     .side-element {
       position: fixed;
@@ -609,19 +712,19 @@
   <div class="video-overlay"></div>
 
   <header>
-    <a href="#hero" class="logo">EI</a>
+    <a href="#hero" class="logo">Erdem Ipek</a>
     <nav id="nav">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a class="cta" href="mailto:ei.erdemipek@gmail.com">Hire Me</a>
+      <a class="cta" href="#" id="navHire">Hire Me</a>
     </nav>
     <button class="menu-btn" id="menuBtn">Menu</button>
   </header>
 
   <div class="side-element side-left">
-    <a href="mailto:ei.erdemipek@gmail.com">ei.erdemipek@gmail.com</a>
+    <a href="#" id="sideEmailLink">Email</a>
   </div>
 
   <div class="side-element side-right">
@@ -630,9 +733,6 @@
     </a>
     <a href="https://www.linkedin.com/in/erdem-ipek-20118b195/" target="_blank" rel="noopener" title="LinkedIn">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-    </a>
-    <a href="https://twitter.com/Erdempek16" target="_blank" rel="noopener" title="Twitter">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
     </a>
     <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener" title="Fiverr">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><text y="17" font-size="16" font-family="serif" font-weight="bold">f</text></svg>
@@ -646,12 +746,29 @@
       <h1 class="hero-name">Erdem Ipek.</h1>
       <h2 class="hero-sub">I write code that moves machines.</h2>
       <p class="hero-desc">
-        Software Engineer at <span style="color:var(--accent)">RBW</span>.
-        I build real-time robotics software, autonomous systems, and full-stack applications
-        with Python, Flutter, and ROS2. From welding cobots to agricultural robots to
-        65+ delivered freelance projects.
+        Software engineer at <span style="color:var(--accent)">RBW</span>.
+        I build real-time robotics software, autonomous systems, and full-stack tools
+        with Python, Flutter, and ROS2 — from industrial welding integrations to field robots and
+        freelance delivery (65+ projects).
       </p>
-      <a class="hero-cta" href="#projects">See My Work</a>
+      <a class="hero-cta" href="#projects">See my work</a>
+    </section>
+
+    <section class="partner-showcase" aria-label="Equipment and robotics">
+      <div class="partner-showcase-inner">
+        <div class="partner-showcase-label">Welding power sources — protocol interfaces (Modbus TCP, EtherNet/IP)</div>
+        <div class="partner-logos">
+          <img src="images/partners/kemppi.png" alt="Kemppi" width="130" height="38" loading="lazy" decoding="async" />
+          <img src="images/partners/fronius.png" alt="Fronius" width="130" height="38" loading="lazy" decoding="async" />
+          <img src="images/partners/esab.png" alt="ESAB" width="130" height="38" loading="lazy" decoding="async" />
+          <img src="images/partners/ewm.png" alt="EWM" width="200" height="111" loading="lazy" decoding="async" />
+        </div>
+        <div class="rainbow-block">
+          <div class="partner-showcase-label">Robotics — collaboration</div>
+          <img src="images/partners/rainbow-robotics.png" alt="Rainbow Robotics" class="rainbow-hero-logo" width="240" height="40" loading="lazy" decoding="async" />
+        </div>
+      </div>
+      <p class="partner-disclaimer">Logos are trademarks of their respective owners.</p>
     </section>
 
     <section id="about">
@@ -662,40 +779,36 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I'm a software engineer at <span class="hl">RBW</span> where I develop
-            optimized <span class="hl">Python</span> and <span class="hl">Flutter</span>
-            code for real-time robotics applications. I work with cross-functional teams
-            to build communication systems, troubleshoot and debug complex robotic platforms,
-            and maintain best practices across the stack.
+            I am a software engineer at <span class="hl">RBW</span>, where I develop
+            production <span class="hl">Python</span> and <span class="hl">Flutter</span>
+            software for real-time robotics. I collaborate with cross-functional teams on
+            communication stacks, integration testing, and reliable operation of robotic platforms.
           </p>
           <p>
-            Before RBW, I built autonomous agricultural vehicles at Daphne Bilisim,
-            developed an inventory tracking system at ASKi, created a licence plate recognition
-            model at Erciyes University, and built open data portals and search systems
+            Previously: autonomous agricultural systems at Daphne Bilisim, an inventory platform at ASKi,
+            full-stack and campus systems at Erciyes University, and open-data and search infrastructure
             at Kayseri Ulasim.
           </p>
           <p>
-            I also deliver
-            <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">freelance projects</a>
-            internationally on Fiverr with 65+ projects delivered, 50+ satisfied customers,
-            and zero negative reviews.
+            I also ship
+            <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">freelance work</a>
+            on Fiverr (65+ projects, strong client feedback).
           </p>
-          <p>Technologies I work with:</p>
+          <p>Core stack:</p>
           <ul class="skills-list">
             <li>Python</li>
             <li>Flutter</li>
             <li>ROS2</li>
             <li>PostgreSQL</li>
             <li>.NET</li>
-            <li>Arduino</li>
-            <li>OpenCV / AI</li>
+            <li>PyTorch / ML</li>
             <li>Linux</li>
           </ul>
         </div>
         <div>
           <div class="avatar-box">
-            <div class="avatar-initials">EI</div>
-            <div class="avatar-tag">erdemipek.com</div>
+            <div class="avatar-initials" aria-hidden="true">&lt;/&gt;</div>
+            <div class="avatar-tag">Robotics &middot; Industrial software</div>
           </div>
         </div>
       </div>
@@ -731,7 +844,7 @@
           <div class="exp-company">Ankara Su ve Kanalizasyon Idaresi (ASKi) &middot; Contract &middot; Ankara, Turkey</div>
           <ul class="exp-list">
             <li>Designed and developed an Inventory Tracking System.</li>
-            <li>Managing and improving companies network structure.</li>
+            <li>Managed and improved the organization&rsquo;s network architecture.</li>
             <li>Updating and testing critical web services.</li>
           </ul>
           <div class="tags">
@@ -747,13 +860,12 @@
           <div class="exp-role">Computer Engineer</div>
           <div class="exp-company">Daphne Bilisim Limited Sirketi &middot; Full-time &middot; Kayseri</div>
           <ul class="exp-list">
-            <li>Autonomous agricultural vehicle development: autonomous navigation, long-distance communication, and video transmission (Python, Arduino, LIDAR, Jetson NANO, Pixhawk, ESC, GNSS).</li>
+            <li>Autonomous agricultural vehicle development: autonomous navigation, long-distance communication, and video transmission (Python, embedded controllers, LIDAR, Jetson NANO, Pixhawk, ESC, GNSS).</li>
             <li>Development of own mission planning software and ground station software.</li>
           </ul>
           <div class="tags">
             <span>Python</span>
             <span>Flutter</span>
-            <span>Arduino</span>
             <span>LIDAR</span>
             <span>Jetson NANO</span>
           </div>
@@ -766,14 +878,13 @@
           <div class="exp-role">Computer Engineer</div>
           <div class="exp-company">Erciyes University &middot; Full-time &middot; Kayseri</div>
           <ul class="exp-list">
-            <li>Developed own Licence Plate Recognition (LPR) model using Python, PyTorch, YOLO. Reached over 95% accuracy.</li>
-            <li>Developed and released campus parking lot system (both Frontend and Backend) using .NET, .NET MVC.</li>
+            <li>Developed and released a campus parking system (frontend and backend) using .NET and MVC.</li>
+            <li>Delivered supporting tooling and infrastructure for campus operations.</li>
           </ul>
           <div class="tags">
             <span>Python</span>
-            <span>PyTorch</span>
-            <span>YOLO</span>
             <span>.NET</span>
+            <span>MVC</span>
           </div>
         </div>
       </div>
@@ -806,13 +917,12 @@
           <div class="exp-company">Kayseri Seker &middot; Intern</div>
           <ul class="exp-list">
             <li>Development of Autonomous Agricultural Robot software: TUBITAK 3181328 project.</li>
-            <li>Application of AI and image processing techniques: Python, OpenCV, TensorFlow.</li>
+            <li>Application of AI and image processing techniques: Python, TensorFlow.</li>
             <li>Disease detection and plant counting.</li>
           </ul>
           <div class="tags">
             <span>Python</span>
             <span>TensorFlow</span>
-            <span>OpenCV</span>
           </div>
         </div>
       </div>
@@ -871,32 +981,13 @@
           <p class="project-desc">
             Full autonomous agricultural vehicle: motor control software, ground station software,
             autonomous driving algorithm, and sockets for transmitting data and video.
-            Built with Python, Arduino, LIDAR, Jetson NANO, Pixhawk, ESC, and GNSS.
+            Built with Python, embedded hardware, LIDAR, Jetson NANO, Pixhawk, ESC, and GNSS.
           </p>
           <div class="project-tech">
             <span>Python</span>
             <span>Flutter</span>
-            <span>Arduino</span>
             <span>LIDAR</span>
             <span>Jetson NANO</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <div class="project-icon">//</div>
-            <div class="project-links"></div>
-          </div>
-          <div class="project-name">Licence Plate Recognition</div>
-          <p class="project-desc">
-            Custom LPR model using Python, PyTorch, and YOLO achieving over 95% accuracy.
-            Integrated into a full campus parking lot system with .NET MVC frontend and backend.
-          </p>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>PyTorch</span>
-            <span>YOLO</span>
-            <span>.NET</span>
           </div>
         </div>
 
@@ -909,12 +1000,11 @@
           <p class="project-desc">
             Autonomous agricultural robot software for TUBITAK project 3181328.
             AI and image processing for disease detection and plant counting
-            using Python, OpenCV, and TensorFlow.
+            using Python and TensorFlow.
           </p>
           <div class="project-tech">
             <span>Python</span>
             <span>TensorFlow</span>
-            <span>OpenCV</span>
           </div>
         </div>
 
@@ -941,13 +1031,16 @@
     </section>
 
     <section id="contact">
-      <p class="contact-overline">04. What is Next?</p>
-      <h2>Let us Work Together</h2>
+      <p class="contact-overline">04. What&rsquo;s next?</p>
+      <h2>Let&rsquo;s work together</h2>
       <p>
-        I am open to challenging roles in software engineering, robotics, automation, and AI.
-        Whether you have a project, a position, or just want to talk tech, my inbox is open.
+        I am open to software engineering roles in robotics, automation, and real-time systems.
+        If you have a project or a role to discuss, send a message and I will respond promptly.
       </p>
-      <a class="contact-btn" href="mailto:ei.erdemipek@gmail.com">Say Hello</a>
+      <p class="contact-hint">
+        Tap to open your email app. Your address is assembled in the browser so it is not stored as plain text on this page.
+      </p>
+      <button type="button" class="contact-btn" id="helloBtn">Say hello</button>
     </section>
 
   </main>
@@ -956,23 +1049,40 @@
     <div class="social-links">
       <a href="https://github.com/ErdemIpek" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/erdem-ipek-20118b195/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://twitter.com/Erdempek16" target="_blank" rel="noopener">Twitter</a>
       <a href="https://www.fiverr.com/erdemipek" target="_blank" rel="noopener">Fiverr</a>
     </div>
     <p>Designed &amp; Built by Erdem Ipek</p>
   </footer>
 
   <script>
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('nav');
-    btn.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      btn.textContent = nav.classList.contains('open') ? 'Close' : 'Menu';
-    });
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      nav.classList.remove('open');
-      btn.textContent = 'Menu';
-    }));
+    (function () {
+      function openPrimaryEmail(e) {
+        if (e) e.preventDefault();
+        var local = ['ei', 'erdemipek'].join('.');
+        var host = ['gmail', 'com'].join('.');
+        window.location.href = 'mailto:' + local + '@' + host;
+      }
+
+      var helloBtn = document.getElementById('helloBtn');
+      var navHire = document.getElementById('navHire');
+      var sideEmail = document.getElementById('sideEmailLink');
+      if (helloBtn) helloBtn.addEventListener('click', openPrimaryEmail);
+      if (navHire) navHire.addEventListener('click', openPrimaryEmail);
+      if (sideEmail) sideEmail.addEventListener('click', openPrimaryEmail);
+
+      var btn = document.getElementById('menuBtn');
+      var nav = document.getElementById('nav');
+      btn.addEventListener('click', function () {
+        nav.classList.toggle('open');
+        btn.textContent = nav.classList.contains('open') ? 'Close' : 'Menu';
+      });
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          btn.textContent = 'Menu';
+        });
+      });
+    })();
   </script>
 
 </body>
