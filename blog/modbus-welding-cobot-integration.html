@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modbus TCP and EtherNet/IP for welding cobots | Erdem Ipek</title>
+  <meta name="description" content="Industrial welding integration: Modbus TCP and EtherNet/IP drivers for Kemppi, Fronius, ESAB, EWM. How cobot controllers talk to power sources in production, by Erdem Ipek." />
+  <meta name="author" content="Erdem Ipek" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0a192f" />
+  <meta property="article:published_time" content="2026-03-30T00:00:00+03:00" />
+  <meta property="article:modified_time" content="2026-03-30T00:00:00+03:00" />
+  <meta property="article:author" content="https://erdemipek.com/" />
+  <link rel="canonical" href="https://erdemipek.com/blog/modbus-welding-cobot-integration.html" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Erdem Ipek" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://erdemipek.com/blog/modbus-welding-cobot-integration.html" />
+  <meta property="og:title" content="Modbus TCP and EtherNet/IP for welding cobots" />
+  <meta property="og:description" content="Protocol drivers for industrial welding machines: real production notes from robotics software work." />
+  <meta property="og:image" content="https://erdemipek.com/favicon.ico" />
+  <meta property="og:image:alt" content="Modbus TCP and EtherNet/IP for welding cobots — Erdem Ipek" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Modbus TCP and EtherNet/IP for welding cobots" />
+  <meta name="twitter:description" content="Modbus TCP and EtherNet/IP drivers for Kemppi, Fronius, ESAB, EWM. Production robotics integration notes." />
+  <meta name="twitter:image" content="https://erdemipek.com/favicon.ico" />
+  <meta name="twitter:image:alt" content="Article: welding cobot protocol integration" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://erdemipek.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://erdemipek.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Modbus TCP and EtherNet/IP for welding cobots", "item": "https://erdemipek.com/blog/modbus-welding-cobot-integration.html" }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://erdemipek.com/blog/modbus-welding-cobot-integration.html#article",
+        "headline": "Modbus TCP and EtherNet/IP for welding cobots",
+        "url": "https://erdemipek.com/blog/modbus-welding-cobot-integration.html",
+        "datePublished": "2026-03-30T00:00:00+03:00",
+        "dateModified": "2026-03-30T00:00:00+03:00",
+        "author": { "@type": "Person", "@id": "https://erdemipek.com/#person", "name": "Erdem Ipek", "url": "https://erdemipek.com/" },
+        "publisher": { "@type": "Person", "@id": "https://erdemipek.com/#person", "name": "Erdem Ipek", "url": "https://erdemipek.com/" },
+        "description": "How protocol drivers connect robot controllers to industrial welding equipment using Modbus TCP and EtherNet/IP.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://erdemipek.com/blog/#blog" },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://erdemipek.com/blog/modbus-welding-cobot-integration.html#webpage",
+          "url": "https://erdemipek.com/blog/modbus-welding-cobot-integration.html"
+        },
+        "keywords": "Modbus TCP, EtherNet/IP, welding cobot, Kemppi, Fronius, ESAB, EWM, industrial robotics, ROS2"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">Erdem Ipek</a>
+    <nav aria-label="Blog navigation">
+      <a href="/">Portfolio</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <article class="blog-wrap" itemscope itemtype="https://schema.org/BlogPosting">
+    <h1 itemprop="headline">Modbus TCP and EtherNet/IP for welding cobots</h1>
+    <p class="blog-meta"><time datetime="2026-03-30" itemprop="datePublished">March 30, 2026</time> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Erdem Ipek</span></span></p>
+
+    <p itemprop="description">
+      Teams building <strong>industrial robotics</strong>, <strong>welding automation</strong>, or <strong>fieldbus integration</strong> eventually need to connect a robot controller to real welding hardware. This article explains, at a practical level, what <strong>Modbus TCP</strong> and <strong>EtherNet/IP</strong> mean in that context, and why brands like <strong>Kemppi</strong>, <strong>Fronius</strong>, <strong>ESAB</strong>, and <strong>EWM</strong> show up in integration work.
+    </p>
+
+    <h2>Why welding cobots need protocol drivers, not just motion</h2>
+    <p>
+      A cobot arm can move a torch along a path, but the weld quality lives in the power source: current, voltage, waveform, and fault handling. In production, the robot program must <em>command</em> those parameters and <em>read</em> live feedback so the controller can react to arc stability, errors, or process limits. That conversation happens over industrial Ethernet protocols. Two of the most common in this space are Modbus TCP (often register-based) and EtherNet/IP (CIP-based I/O and explicit messaging, depending on the device).
+    </p>
+    <p>
+      From a software perspective, your team is not only mapping registers. You are designing timeouts, retry policies, state machines for weld phases, and safe shutdown paths when communication drops. That is the difference between a demo script and something a factory will run on a night shift.
+    </p>
+
+    <h2>Modbus TCP in welding integrations</h2>
+    <p>
+      Modbus TCP is widely used because many welding power sources expose coils and holding registers over Ethernet. The stack is relatively simple to implement, which helps when you are iterating quickly inside a larger robotics stack. The hard part is not the socket: it is reading the vendor manual, aligning register addresses with the weld schedule your process engineer wants, and validating units and scaling so you never command the wrong amperage range.
+    </p>
+    <p>
+      In Python or similar languages, you typically wrap the low-level read and write calls in a small driver class that your ROS2 nodes or application layer can call. Logging becomes critical. When something fails in the field, you need traces that show exactly which register was written and what the device returned.
+    </p>
+
+    <h2>EtherNet/IP when the device speaks CIP</h2>
+    <p>
+      EtherNet/IP is common in North American automation lines and appears alongside other industrial gear. Integration work often involves explicit messaging or I/O assemblies, depending on the EDS file and the device profile. Compared to Modbus, the mental model is different: you are working with connection paths, assembly instances, and sometimes safety-rated I/O. For a robotics software engineer, the job is to bridge that model into your robot controller or middleware so the rest of the team sees a clean API: start weld, stop, read status, read faults.
+    </p>
+
+    <h2>Multiple brands, one integration goal</h2>
+    <p>
+      Kemppi, Fronius, ESAB, and EWM each have different parameter sets, limits, and fault codes. A portfolio that lists these names should mean the engineer has dealt with vendor-specific quirks: different register maps, different sequencing rules, and different ways to acknowledge alarms. Concrete review topics include how faults were surfaced to the operator UI, how the system behaved when Ethernet latency spiked, and how tests were automated in CI or on a hardware bench.
+    </p>
+
+    <h2>ROS2 and real-time robotics context</h2>
+    <p>
+      In many modern cells, ROS2 nodes handle motion planning, I/O bridges, or supervisory logic. The welding driver might run as a dedicated node or behind a thin RPC layer so non-ROS components can still command the weld. The important design question is not the ROS2 distro name alone, but how messages are synchronized with the fieldbus, how you avoid blocking the control loop, and how you document assumptions for the next engineer on call.
+    </p>
+
+    <div class="cta-box">
+      I build and maintain this class of integration in production contexts. Background and projects: <a href="/">portfolio</a>. For freelance work see Fiverr, or use <a href="/#contact">contact</a> for general questions.
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <p><a href="/blog/">Back to blog</a> · <a href="/">Home</a></p>
+  </footer>
+</body>
+</html>

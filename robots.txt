@@ -1,0 +1,6 @@
+# https://erdemipek.com/
+User-agent: *
+Allow: /
+
+# Sitemap (submit in Google Search Console + Bing Webmaster Tools)
+Sitemap: https://erdemipek.com/sitemap.xml

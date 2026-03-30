@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROS2, Python, and robotics software engineering | Erdem Ipek</title>
+  <meta name="description" content="What robotics software engineers ship: ROS2, Python, Flutter operator tools, integration testing, and practical review ideas for 2026. By Erdem Ipek." />
+  <meta name="author" content="Erdem Ipek" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0a192f" />
+  <meta property="article:published_time" content="2026-03-30T00:00:00+03:00" />
+  <meta property="article:modified_time" content="2026-03-30T00:00:00+03:00" />
+  <meta property="article:author" content="https://erdemipek.com/" />
+  <link rel="canonical" href="https://erdemipek.com/blog/ros2-python-robotics-software-engineer.html" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Erdem Ipek" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://erdemipek.com/blog/ros2-python-robotics-software-engineer.html" />
+  <meta property="og:title" content="ROS2, Python, and what robotics software engineers actually ship" />
+  <meta property="og:description" content="Real-time robotics stacks, Flutter tooling, and what production ROS2 work looks like." />
+  <meta property="og:image" content="https://erdemipek.com/favicon.ico" />
+  <meta property="og:image:alt" content="ROS2, Python, and robotics software engineering — Erdem Ipek" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ROS2, Python, and robotics software engineering" />
+  <meta name="twitter:description" content="ROS2, Python, Flutter, integration testing, and what production robotics software work looks like in 2026." />
+  <meta name="twitter:image" content="https://erdemipek.com/favicon.ico" />
+  <meta name="twitter:image:alt" content="Article: ROS2 and robotics software engineering" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://erdemipek.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://erdemipek.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "ROS2, Python, and robotics software engineers", "item": "https://erdemipek.com/blog/ros2-python-robotics-software-engineer.html" }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://erdemipek.com/blog/ros2-python-robotics-software-engineer.html#article",
+        "headline": "ROS2, Python, and what robotics software engineers actually ship",
+        "url": "https://erdemipek.com/blog/ros2-python-robotics-software-engineer.html",
+        "datePublished": "2026-03-30T00:00:00+03:00",
+        "dateModified": "2026-03-30T00:00:00+03:00",
+        "author": { "@type": "Person", "@id": "https://erdemipek.com/#person", "name": "Erdem Ipek", "url": "https://erdemipek.com/" },
+        "publisher": { "@type": "Person", "@id": "https://erdemipek.com/#person", "name": "Erdem Ipek", "url": "https://erdemipek.com/" },
+        "description": "Skills and deliverables in robotics software: ROS2, Python, Flutter, testing, and distributed collaboration.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://erdemipek.com/blog/#blog" },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://erdemipek.com/blog/ros2-python-robotics-software-engineer.html#webpage",
+          "url": "https://erdemipek.com/blog/ros2-python-robotics-software-engineer.html"
+        },
+        "keywords": "ROS2, Python, robotics software engineer, Flutter, real-time systems, industrial automation"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">Erdem Ipek</a>
+    <nav aria-label="Blog navigation">
+      <a href="/">Portfolio</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <article class="blog-wrap" itemscope itemtype="https://schema.org/BlogPosting">
+    <h1 itemprop="headline">ROS2, Python, and what robotics software engineers actually ship</h1>
+    <p class="blog-meta"><time datetime="2026-03-30" itemprop="datePublished">March 30, 2026</time> · <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Erdem Ipek</span></span></p>
+
+    <p itemprop="description">
+      Search traffic for <strong>ROS2 developer</strong>, <strong>robotics software engineer</strong>, or <strong>Python robotics</strong> is high because the job titles are vague. This article maps those terms to concrete deliverables: what shipping software actually involves, how it shows up in code review, and what a serious technical review can cover beyond tutorials.
+    </p>
+
+    <h2>ROS2 is a middleware, not a single skill</h2>
+    <p>
+      Knowing the ROS2 command line helps, but shipping software means designing nodes with clear responsibilities, defining message contracts your team will not regret in six months, and understanding executor models enough that you do not starve critical callbacks. Good reviews look at how responsibilities split between control, I/O, and UI, and how failures are logged and reproduced when a robot misbehaves on a customer floor.
+    </p>
+    <p>
+      Python remains the default language for robotics research and a large share of application code. The useful signal in portfolios is not syntax, but structure: packages, tests, typing where it pays off, and documentation that another engineer can follow without a screen share.
+    </p>
+
+    <h2>Flutter and operator-facing tools</h2>
+    <p>
+      Industrial customers expect tablets and HMIs that are stable and readable. Flutter is a practical choice for cross-platform operator tools that talk to your backend or ROS2 bridges. A solid review looks at screenshots or architecture notes: how state sync works, how authentication is handled on the plant network, and how updates roll out without stopping production.
+    </p>
+
+    <h2>Integration testing and hardware in the loop</h2>
+    <p>
+      Robotics has a physics problem: simulation catches a lot, but not everything. Strong engineers describe their bench setup, how they mock hardware when they must, and what they validate only on real devices. Mentioning <strong>Modbus TCP</strong>, <strong>EtherNet/IP</strong>, or specific sensors shows they have crossed the gap between simulation and factory reality.
+    </p>
+
+    <h2>Location, time zones, and distributed teams</h2>
+    <p>
+      Teams in Europe, North America, and Asia collaborate on robotics products. Being based in <strong>Istanbul</strong> does not limit impact if communication and documentation are strong. Async-friendly writeups, clear handoffs, and overlap windows that respect both sides matter more than a single office location.
+    </p>
+
+    <h2>What to verify in a technical review</h2>
+    <p>
+      Practical checks that map to real work: a small coding exercise that involves parsing device feedback, a system design prompt for a weld or pick-and-place cell, or a code review of an existing driver with intentional bugs. Combine that with behavioral questions about production incidents and you get signal fast.
+    </p>
+    <p>
+      My own background spans autonomous agricultural systems, transportation data platforms, and current work at RBW on real-time robotics. More detail is on my <a href="/">portfolio</a>; freelance work is listed on Fiverr, and the site has a contact path for general questions.
+    </p>
+
+    <div class="cta-box">
+      More on my work: <a href="/">portfolio</a>, <a href="modbus-welding-cobot-integration.html">welding protocol article</a>, or <a href="/#contact">contact</a> for freelance (Fiverr) or general questions.
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <p><a href="/blog/">Back to blog</a> · <a href="/">Home</a></p>
+  </footer>
+</body>
+</html>
